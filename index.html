@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="shortcut icon" href="/src/img/Icones/comida-rapida.png">
-    <link href="./src/output.css" rel="stylesheet">
+    
     <!-- META TAG OG -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Prime Burgeria" />
@@ -25,6 +26,23 @@
 
     <title>PrimeBurgeria</title>
 </head>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'prime-brown': '#3D2C24',
+                    'prime-gold': '#D4AF37',
+                    'prime-cinza': '#B0B0B0'
+                },
+                backgroundImage: {
+                    home: "url('../src/img/fundo.png')",
+                }
+            }
+        }
+    }
+</script>
+
 
 <body>
     <!--HEADER-->
@@ -33,24 +51,26 @@
             <div>
                 <img class="w-12 mx-auto cursor-pointer rounded-full mt-1 mb-1 " src="./src/img/Logo.webp" alt="...">
             </div>
-        
-            <div class="nav-links transition-all duration-700 ease-in-out md:static absolute bg-white md:min-h-fit min-h-[50vh] left-0 top-0 md:w-auto w-full flex items-center px-5 opacity-0 md:opacity-100 translate-y-[-100%] md:translate-y-0">
+
+            <div
+                class="nav-links transition-all duration-700 ease-in-out md:static absolute bg-white md:min-h-fit min-h-[50vh] left-0 top-0 md:w-auto w-full flex items-center px-5 opacity-0 md:opacity-100 translate-y-[-100%] md:translate-y-0">
                 <ul class="mx-auto flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5 text-center">
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#home">Home</a></li>
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#about">Sobre Nós</a></li>
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#menu">Menu</a></li>
-                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#Assessment">Avaliação</a></li>
+                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#Assessment">Avaliação</a>
+                    </li>
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#address">Endereço</a></li>
                 </ul>
             </div>
-        
+
             <div class="flex items-center gap-6">
                 <button class="flex items-center gap-2 text-black font-bold" id="cart-btn">
                     <span id="cart-count">0</span>
-                    
+
                     <img src="" alt="">
                     <i class="fa fa-cart-plus text-lg text-black"></i><!--CARRINHO DO MODAL-->
-                    
+
                 </button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
@@ -78,10 +98,10 @@
         </div>
     </div>
     <!--FIM MODAL CART-->
-   
+
     <!--INICIO CARD-->
     <section class="w-full h-[420px] bg-home relativo flex flex-col justify-center items-center">
-        <img src="/src/img/fundo.png" alt="Logo Prime Burgeria"
+        <img src="./src/img/Logo.webp" alt="Logo Prime Burgeria"
             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"><br>
 
         <span class="text-white font-medium">Rua 57, Valparaíso de Goiás </span>
@@ -386,8 +406,8 @@
                     <h3 class="font-bold">Milk shake de Morango-300ml</h3>
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 9.00</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Milk shake de Morango-300ml" data-price="9.00">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Milk shake de Morango-300ml"
+                            data-price="9.00">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -527,7 +547,7 @@
 
     <!--BUTTON CART FOOTER-->
     <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
-        
+
 
     </footer>
     <!-- FIM BUTTON CART FOOTER-->
