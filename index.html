@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +17,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="shortcut icon" href="/src/img/Icones/comida-rapida.png">
-    
+
     <!-- META TAG OG -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Prime Burgeria" />
@@ -38,6 +39,7 @@
                 backgroundImage: {
                     home: "url('../src/img/fundo.png')",
                 }
+                
             }
         }
     }
@@ -46,36 +48,34 @@
 
 <body>
     <!--HEADER-->
-    <header class="bg-white h-19 fixed w-full" id="about">
+    <div id="home"></div>
+    <header class=" bg-prime-cinza h-19 fixed w-full" id="about">
         <nav class="flex items-center justify-between w-[92%] mx-auto">
             <div>
-                <img class="w-12 mx-auto cursor-pointer rounded-full mt-1 mb-1 " src="./src/img/Logo.webp" alt="...">
+                <img class="w-12 mx-auto cursor-pointer rounded-full mt-1 mb-1" src="./src/img/Logo.webp" alt="...">
             </div>
-
-            <div
-                class="nav-links transition-all duration-700 ease-in-out md:static absolute bg-white md:min-h-fit min-h-[50vh] left-0 top-0 md:w-auto w-full flex items-center px-5 opacity-0 md:opacity-100 translate-y-[-100%] md:translate-y-0">
-                <ul class="mx-auto flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-5 text-center">
+    
+            <div class="nav-links bg-prime-cinza transition-all duration-700 ease-in-out md:static absolute md:min-h-fit min-h-[50vh] left-0 top-0 md:w-auto w-full flex items-center px-5 md:opacity-100 translate-y-[-100%] md:translate-y-0">
+                <ul class="mx-auto flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-3 text-center">
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#home">Home</a></li>
-                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#about">Sobre Nós</a></li>
+                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#sobre-nos">Sobre Nós</a></li>
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#menu">Menu</a></li>
-                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#Assessment">Avaliação</a>
-                    </li>
+                    <li><a class="hover:text-gray-500 transition-colors duration-300" href="#Assessment">Avaliação</a></li>
                     <li><a class="hover:text-gray-500 transition-colors duration-300" href="#address">Endereço</a></li>
                 </ul>
             </div>
-
+    
             <div class="flex items-center gap-6">
                 <button class="flex items-center gap-2 text-black font-bold" id="cart-btn">
                     <span id="cart-count">0</span>
-
                     <img src="" alt="">
-                    <i class="fa fa-cart-plus text-lg text-black"></i><!--CARRINHO DO MODAL-->
-
+                    <i class="fa fa-cart-plus text-lg text-black"></i>
                 </button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
         </nav>
     </header>
+    
 
     <!--MODAL CART-->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-50 items-center justify-center hidden mb-8"
@@ -109,15 +109,42 @@
             <span class="text-white font-medium">Seg á Dom - 18:00 ás 23:40</span>
         </div>
     </section>
-
     <!--FIM HEADER-->
+
+    <!--INICIO DO SOBRE NÓS-->
+    <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 text-prime-brown">
+        SOBRE <span class="text-prime-gold">NÓS</span>
+    </h1>
+    <div></div>
+    <section id="sobre-nos" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 scroll-mt-32 pt-5">
+
+        <article>
+            <img class="rounded-md" src="./src/img/Loja.webp" alt="frente da loja">
+
+        </article>
+
+        <article>
+            <p class="py-6 text-lg text-gray-700">
+                
+
+                A Prime Burgeria nasceu da paixão por hambúrgueres de qualidade. Seu fundador queria criar um lugar onde
+                cada hambúrguer fosse feito com ingredientes frescos e premium, com o cuidado de uma refeição caseira.
+                Desde o início, a Prime Burgeria se destacou pelo compromisso com a excelência e o atendimento caloroso. <br>
+
+               Hoje, é o ponto de encontro para quem busca um hambúrguer único e uma experiência especial. Na Prime
+                Burgeria, cada cliente é tratado como parte da família, e cada hambúrguer é preparado para ser mais do
+                que uma refeição: uma lembrança deliciosa.
+            </p>
+        </article>
+    </section>
+    <!--FIM DO SOBRE NÓS-->
 
     <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 text-prime-brown">
         NOSSO <span class="text-prime-gold">MENU</span>
     </h1>
 
     <!--INICIO MENU-->
-    <main id="menu">
+    <main id="menu" class="scroll-mt-32 pt-5">
         <section class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
 
             <!--INICIO DO PRODUTO-->
@@ -127,7 +154,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer Smash</h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger 160g, queijo cheddar e
+                    <p class="text-sm text-gray-700 text-gray-700">Pão levinho de fermentação natural de trigo, burger 160g, queijo cheddar e
                         maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -148,7 +175,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer Bacon </h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger 160g, fatias de bacon
+                    <p class="text-sm text-gray-700">Pão levinho de fermentação natural de trigo, burger 160g, fatias de bacon
                         crocante, queijo cheddar mix de folhas e tomate defumado.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -169,7 +196,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer Duplo</h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger 200g, duplo queijo cheddar,
+                    <p class="text-sm text-gray-700">Pão levinho de fermentação natural de trigo, burger 200g, duplo queijo cheddar,
                         maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -190,7 +217,7 @@
 
                 <div>
                     <h3 class="font-bold">Dev Chicken</h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger de frango sem antibióticos
+                    <p class="text-sm text-gray-700">Pão levinho de fermentação natural de trigo, burger de frango sem antibióticos
                         120g, tomate, cebola, picles, maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -211,7 +238,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer Riquinho</h3>
-                    <p class="text-sm">Pão levinho,burger smash 80g, queijo prato , alface crespa, tomate e molho
+                    <p class="text-sm text-gray-700">Pão levinho,burger smash 80g, queijo prato , alface crespa, tomate e molho
                         especial</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -232,7 +259,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer da casa</h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger 160g,dobro de queijo, bacon e
+                    <p class="text-sm text-gray-700">Pão levinho de fermentação natural de trigo, burger 160g,dobro de queijo, bacon e
                         maionese.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -253,7 +280,7 @@
 
                 <div>
                     <h3 class="font-bold">Hambúguer dev</h3>
-                    <p class="text-sm">Pão levinho de fermentação natural de trigo, burger 160g, queijo cheddar e
+                    <p class="text-sm text-gray-700">Pão levinho de fermentação natural de trigo, burger 160g, queijo cheddar e
                         maionese da casa.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -274,7 +301,7 @@
 
                 <div>
                     <h3 class="font-bold">hambuergue salada</h3>
-                    <p class="text-sm">Pão smash, burger 80g, queijo muçarela, alface crespa, tomate, ovo , bacon e
+                    <p class="text-sm text-gray-700">Pão smash, burger 80g, queijo muçarela, alface crespa, tomate, ovo , bacon e
                         maionese trufada.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
@@ -296,7 +323,7 @@
 
                 <div class="w-full">
                     <h3 class="font-bold">Batata Frita</h3>
-                    <p class="text-sm">G</p>
+                    <p class="text-sm text-gray-700">G</p>
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 15.00</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Batata Frita G"
@@ -316,7 +343,7 @@
 
                 <div class="w-full">
                     <h3 class="font-bold">Batata Frita</h3>
-                    <p class="text-sm">P</p>
+                    <p class="text-sm text-gray-700">P</p>
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 10.00</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Batata Frita P"

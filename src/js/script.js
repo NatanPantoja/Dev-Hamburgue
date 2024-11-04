@@ -177,23 +177,23 @@ checkoutBtn.addEventListener("click", function () {
         );
     }).join("\n");
 
-    // Calcula o valor total do carrinho
-    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    
+    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0); // Calcula o valor total do carrinho
 
-    // Gera a mensagem completa, incluindo os itens e o valor total
+    
     const message = encodeURIComponent(
-        `Pedido:\n${cartItems}\n\nTotal: R$${total.toFixed(2)}\n\nEndereço: ${addressInput.value}`
-    );
+        `Pedido:\n${cartItems}\n\nTotal: R$${total.toFixed(2)}\n\nEndereço: ${addressInput.value}` 
+    ); // Gera a mensagem completa, incluindo os itens e o valor total
 
-    // Número do telefone do restaurante
-    const phone = "61981500971";
+   
+    const phone = "61981500971";   // Número do telefone do restaurante
 
-    // Abre o WhatsApp com a mensagem gerada
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank"); // Abre o WhatsApp com a mensagem gerada
 
-    // Limpa o carrinho e atualiza a interface
+    
     cart = [];
-    updataCartModal();
+    updataCartModal(); // Limpa o carrinho e atualiza a interface
 });
 
 
