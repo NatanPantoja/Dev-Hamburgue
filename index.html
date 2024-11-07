@@ -62,7 +62,7 @@
                     <li><a class="hover:text-white transition-colors duration-300" href="#sobre-nos">Sobre Nós</a></li>
                     <li><a class="hover:text-white transition-colors duration-300" href="#menu">Menu</a></li>
                     <li><a class="hover:text-white transition-colors duration-300" href="#Assessment">Avaliação</a></li>
-                    <li><a class="hover:text-white transition-colors duration-300" href="#address">Endereço</a></li>
+                    <li><a class="hover:text-white transition-colors duration-300" href="#endereço">Endereço</a></li>
                 </ul>
             </div>
 
@@ -106,7 +106,7 @@
 
         <span class="text-white font-medium">Rua 57, Valparaíso de Goiás </span>
         <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-            <span class="text-white font-medium">Seg á Dom - 18:00 ás 23:40</span>
+            <span class="text-white font-medium">Seg á Dom - 18:00 ás 23:30</span>
         </div>
     </section>
     <!--FIM HEADER-->
@@ -117,7 +117,7 @@
     </h1>
 
     <section id="sobre-nos"
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 scroll-mt-32 pt-5 items-center">
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 scroll-mt-32 pt-5 items-center md:items-center">
 
         <article>
             <img class="rounded-md" src="./src/img/Loja.webp" alt="frente da loja">
@@ -585,48 +585,64 @@
     <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 text-prime-brown">
         AVALIAÇÃO
     </h1>
-    <section id="Assessment" class=" mx-auto px-4 py-8 scroll-mt-32 pt-5 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-       <!--INICIO CARD COMENTÁRIO-->
+    <section id="Assessment"
+        class=" mx-auto px-4 py-8 scroll-mt-32 pt-5 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <!--INICIO CARD COMENTÁRIO-->
         <article>
             <h6 class="text-center font-bold">João Pedro</h6>
 
             <div class="bg-white p-4 border-solid border-1 shadow-2xl rounded text-gray-700 ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita vitae optio distinctio
-                odit repudiandae aliquam exercitationem quidem! Deleniti minima accusantium dolore cupiditate commodi
-                voluptas unde cumque animi voluptatibus ab?</p>
+                <p>A Prime Burgeria me surpreendeu! Ambiente aconchegante, hambúrguer suculento e bem temperado, com
+                    atendimento rápido e simpático. Já virou meu lugar favorito!</p>
             </div>
 
         </article>
-        
+
         <!--INICIO CARD COMENTÁRIO-->
         <article>
             <h6 class="text-center font-bold">Samuel Pantoja</h6>
 
             <div class="bg-white p-4 border-solid border-1 shadow-2xl rounded text-gray-700 ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita vitae optio distinctio
-                odit repudiandae aliquam exercitationem quidem! Deleniti minima accusantium dolore cupiditate commodi
-                voluptas unde cumque animi voluptatibus ab?</p>
+                <p>Experiência incrível na Prime Burgeria! Hambúrguer caprichado, batatas crocantes e atendimento ótimo.
+                    Dá pra sentir o cuidado em cada detalhe. Recomendo demais!</p>
             </div>
 
         </article>
     </section>
     <!--FIM AVALIAÇÃO-->
+    <!--INICIO LOCALIZAÇÃO-->
+    <h1 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6 text-prime-brown">
+        Localização
+    </h1>
+
+    <section id="endereço" class=" mx-auto px-4 py-8 scroll-mt-32 flex items-center justify-center">
+
+        <article>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.9833996590532!2d-48.07191319763663!3d-16.014379634494944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bd54d87817147%3A0x43018ff6374e44b7!2sGel%C3%A9ia%20Burger!5e0!3m2!1spt-BR!2sbr!4v1730949463185!5m2!1spt-BR!2sbr"
+                width="500" height="400" style="border-radius:10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+    </section>
+    <!--FIM LOCALIZAÇÃO-->
 
 
     <!--BUTTON CART FOOTER-->
     <footer class="w-full bg-prime-cinza py-2 bottom-0 z-40 flex items-center justify-center">
         <p class="flex justify-center text-center font-semibold flex-wrap">
-            Copyright &copy; Todos os Direitos Reservados | Desenvolvido por: 
+            Copyright &copy; Todos os Direitos Reservados | Desenvolvido por:
             <span class="ml-1">
                 <a href="https://wa.me/5561981500971" target="_blank" class="text-white no-underline cursor-pointer">
                     Dev Natanael
                 </a>
             </span>
         </p>
-        
+
 
     </footer>
     <!-- FIM BUTTON CART FOOTER-->
+
+
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
