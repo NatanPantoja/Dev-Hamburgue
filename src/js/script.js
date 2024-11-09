@@ -9,6 +9,7 @@ const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const adressWarn = document.getElementById("address-warn")
 
+
 //Abrir o modal do carrinho 
 cartBtn.addEventListener("click", function () {
     updataCartModal();
@@ -64,53 +65,81 @@ function addToCart(name, price) {
 
 //Atualiza o carrinho
 
+
 function updataCartModal() {
     cartItemsContainer.innerHTML = "";
     let total = 0;
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
-        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
         cartItemElement.innerHTML = `
-         <div class="flex items-center justify-between">
-            <div>
-                <p class="font-bold">${item.name}</p>
-                <p>Qtd: ${item.quantity}</p>
-                <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-bold">${item.name}</p>
+                    <p class="flex items-center  mt-2">
+                        <span class="mr-2">Qtd:</span>
+                        <button class="decrement-btn px-2" data-name="${item.name}" style="border: none; background: #f0f0f0; cursor: pointer; font-size: 1rem;">-</button>
+                        <span class="mx-2 font-bold" style="width: 20px; text-align: center;">${item.quantity}</span>
+                        <button class="increment-btn px-2" data-name="${item.name}" style="border: none; background: #f0f0f0; cursor: pointer; font-size: 1rem;">+</button>
+                    </p>
+                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+                </div>
             </div>
-
-            
-            <button class="remove-from-cart-btn" data-name="${item.name}">
-              Remover
-            </button>
-            
-
-         </div>
-        `
+        `;
 
         total += item.price * item.quantity;
-
-        cartItemsContainer.appendChild(cartItemElement)
-    })
+        cartItemsContainer.appendChild(cartItemElement);
+    });
 
     cartTotal.textContent = total.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
-    })
+    });
 
     cartCounter.innerHTML = cart.length;
-
 }
 
-// Função para remover o item do carrinho
-cartItemsContainer.addEventListener("click", function (event) {
-    if (event.target.classList.contains("remove-from-cart-btn")) {
-        const name = event.target.getAttribute("data-name")
 
+// Função para incrementar a quantidade de um item
+function incrementQuantity(name) {
+    const item = cart.find(item => item.name === name);
+    if (item) {
+        item.quantity += 1;
+        updataCartModal();
+    }
+}
+
+// Função para decrementar a quantidade de um item
+function decrementQuantity(name) {
+    const item = cart.find(item => item.name === name);
+    if (item && item.quantity > 1) {
+        item.quantity -= 1;
+    } else if (item && item.quantity === 1) {
+        // Se a quantidade for 1 e o usuário clicar em "-", o item é removido do carrinho
         removeItemCart(name);
     }
-})
+    updataCartModal();
+}
+
+// Adiciona eventos de clique para os botões "+" e "-"
+cartItemsContainer.addEventListener("click", function(event) {
+    const name = event.target.getAttribute("data-name");
+
+    if (event.target.classList.contains("increment-btn")) {
+        incrementQuantity(name);
+    }
+
+    if (event.target.classList.contains("decrement-btn")) {
+        decrementQuantity(name);
+    }
+
+    if (event.target.classList.contains("remove-from-cart-btn")) {
+        removeItemCart(name);
+    }
+});
+
 
 function removeItemCart(name) {
     const index = cart.findIndex(item => item.name === name);
@@ -128,6 +157,7 @@ function removeItemCart(name) {
         updataCartModal();
     }
 }
+
 
 //Endereço
 addressInput.addEventListener("input", function (event) {
@@ -193,7 +223,7 @@ checkoutBtn.addEventListener("click", function () {
 
     
     cart = [];
-    updataCartModal(); // Limpa o carrinho e atualiza a interface
+    updataCartModal(); // Limpa o carrinho depois que e feito o pedido 
 });
 
 

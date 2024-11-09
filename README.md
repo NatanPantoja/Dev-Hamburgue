@@ -1,7 +1,7 @@
 ![alt text](image.png)
 
 ## 🍔 Prime Burgeria
-Bem-vindo à Prime Burgeria! Esse projeto traz o sabor de uma hamburgueria que preza pela qualidade e autenticidade, onde os clientes podem fazer pedidos diretamente pelo site e finalizá-los pelo WhatsApp.<br> Tudo pensado para facilitar e agilizar a experiência!
+Bem-vindo à Prime Burgeria! Esse projeto traz toda a praticidade para quem ama hambúrgueres de qualidade.<br> Agora você pode fazer seu pedido diretamente pelo site e finalizar pelo WhatsApp — tudo pensado para ser rápido e fácil!
 
 ## 🌐 Acesse o Site
 Confira o site da nossa hamburgueria: [Prime Burgeria](https://primeburgeria.netlify.app/)
