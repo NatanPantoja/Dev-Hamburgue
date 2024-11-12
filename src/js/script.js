@@ -264,3 +264,11 @@ function onToggleMenu(icon) {
     navLinks.classList.toggle('opacity-0');
     navLinks.classList.toggle('translate-y-[-100%]');
 }
+
+
+// Google tag (gtag.js) (esse a do google Analytics)
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BGCT0DLS42');
